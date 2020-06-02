@@ -8,7 +8,7 @@ npm i --save degrade.js
 ```
 
 ```js
-var degrade = require('degrade')
+var degrade = require('degrade.js')
 
 
 degrade(()=>{

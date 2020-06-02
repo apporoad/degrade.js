@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/apporoad/degrade.js#readme",
   "dependencies": {
-    "lisa.promise": "^1.1.2"
+    "lisa.promise": "^2.0.0"
   }
 }
