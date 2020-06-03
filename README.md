@@ -30,8 +30,9 @@ degrade()(()=>{
 const degrade = require('degrade.js')
 
 //test sync
+var d = degrade()
 for (var i = 0; i < 10; i++) {
-    var result = degrade().exec(() => {
+    var result = d.exec(() => {
             if (i == 5) {
                 throw Error('testError')
             }
@@ -52,9 +53,10 @@ for (var i = 0; i < 10; i++) {
 ```js
 const degrade = require('degrade.js')
 (async () => {
+    var d = degrade()
     // test async
     for (var i = 0; i < 10; i++) {
-        var result = await degrade().exec(async () => {
+        var result = await d.exec(async () => {
                     if (i == 5) {
                         throw Error('testError')
                     }

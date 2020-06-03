@@ -2,8 +2,9 @@ const degrade = require('./index')
 
 
 //test sync
+var d1 = degrade()
 for (var i = 0; i < 10; i++) {
-    var result = degrade().exec(() => {
+    var result = d1.exec(() => {
             if (i == 5) {
                 throw Error('testError')
             }
@@ -18,10 +19,12 @@ for (var i = 0; i < 10; i++) {
 }
 
 
+
 var testAsync = async () => {
     // test async
+    var d2 = degrade()
     for (var i = 0; i < 10; i++) {
-        var result = await degrade().exec(async () => {
+        var result = await d2.exec(async () => {
                     if (i == 5) {
                         throw Error('testError')
                     }
